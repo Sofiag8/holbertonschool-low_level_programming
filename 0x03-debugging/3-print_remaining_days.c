@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include "holberton.h"
+
 /**
 * print_remaining_days - takes a date and prints how many days are
 * left in the year, taking leap years into account
