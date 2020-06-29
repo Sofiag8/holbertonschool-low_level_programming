@@ -2,30 +2,26 @@
 /**
  * _strspn - get the length of a prefix substring
  *
- * @accept: pointer to a char to check
- * @s: pointer to a char to check
+ * @accept: pointer to get the bytes
+ * @s: pointer to string char type
  *
- * Return: 0 is success
+ * Return: number of bytes in s which are from accept
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int a = 0;
-	unsigned int b = 0;
+	unsigned int a;
+	unsigned int b;
 
-	while (s[a] && accept[b])
+	for (a = 0; s[a]; a++)
 	{
-		a++;
-		b++;
-
-		if (s[a] == accept[b])
+		for (b = 0; accept[b]; b++)
 		{
-			break;
-
-			if (!accept[b])
-			{
+			if (s[a] == accept[b])
 				break;
-			}
 		}
+		if (!accept[b])
+			break;
 	}
+
 	return (a);
 }
