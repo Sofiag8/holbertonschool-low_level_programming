@@ -20,7 +20,7 @@ char *_strpbrk(char *s, char *accept)
 				return (&(s[a]));
 		}
 		if (s[a] == '\0')
-			return (0);
+			return ('\0');
 	}
-	return (&(s[a]));
+	return (s);
 }
