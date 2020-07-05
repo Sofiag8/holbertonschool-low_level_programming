@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int s, x;
+	int s, x = 0;
 
 	if (argc <= 1)
 	{
@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
 	for (s = 1; s < argc; s++)
 	{
 		x += atoi(argv[s]);
-	}
-	if (x != '0')
-	{
-		printf("Error\n");
-		return (1);
+		if (atoi(argv[s]) == 0 && *argv[s] != '0')
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
 	printf("%d\n", x);
 	return (0);
