@@ -7,16 +7,8 @@
  * @argv: an array varible containing the program arguments
  * Return: 0 is success
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int a;
-
-	for (a = 0; a < argc; a++)
-	{
-		if (*argv[a])
-		{
-			printf("%d\n", a);
-		}
-	}
-	return (argc);
+	printf("%d\n", argc - 1);
+	return (0);
 }
