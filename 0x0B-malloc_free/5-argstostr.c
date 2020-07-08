@@ -7,7 +7,7 @@
  * @ac: number of arguments
  * @av: double pointer to a string
  *
- * Return: 0 is success
+ * Return: a pointer to the new string or Null if it fail
  */
 char *argstostr(int ac, char **av)
 {
@@ -20,9 +20,8 @@ char *argstostr(int ac, char **av)
 	}
 	for (av2 = 0; av2 < ac; av2++)
 	{
-		while (av[av2][av1] != '\0')
+		for (av1 = 0; av[av2][av1] != '\0'; av1++)
 		{
-			av1++;
 			size++;
 		}
 		size++;
