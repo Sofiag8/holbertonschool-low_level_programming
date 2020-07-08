@@ -14,7 +14,10 @@ char *str_concat(char *s1, char *s2)
 	/* nas = newlly alocated space*/
 	char *nas;
 	int string1, string2, count = 0;
-
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	/*recorro ambos string para tener el tamaño*/
 	for (string1 = 0; s1[string1] != '\0'; string1++)
 	{
