@@ -11,7 +11,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	/* returns void so I can set any type */
+	/* unsigned int for 'a' to make the comparisson with size and nmemb */
+	/* *ptr needs to be char because on the main the array is char type */
 	unsigned int a;
 	char *ptr;
 	/* first the task condition */
