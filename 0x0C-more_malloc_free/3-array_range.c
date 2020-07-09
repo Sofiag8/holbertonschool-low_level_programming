@@ -30,8 +30,11 @@ int *array_range(int min, int max)
 	if (newarray == NULL)
 		return (NULL);
 	/* I must run the elements between 0 and 10 to set them in *newarray */
-	/* runner = min number in any case my program receives */
-	/* e.g if min = 2 then runner = 2 if max = 5 then 2,3,4,5 */
+	/* runner = 0 in any case my program receives */
+	/* e.g if min = 2, max = 5 */
+	/* e.g runner = 0 and less than the number of positios = 4 */
+	/* e.g gives us the elements in those 4 positions*/
+	/* so runner < positions, less than the size of the range of numbers */
 	/* runner ascend in the same measure that min keeps ascending */
 	for (runner = 0; runner < positions; runner++, min++)
 		newarray[runner] = min;
