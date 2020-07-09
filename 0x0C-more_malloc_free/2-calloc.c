@@ -13,7 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	/* returns void so I can set any type */
 	unsigned int a;
-	unsigned int *ptr;
+	char *ptr;
 	/* first the task condition */
 	if (nmemb == 0 || size == 0)
 		return (NULL);
