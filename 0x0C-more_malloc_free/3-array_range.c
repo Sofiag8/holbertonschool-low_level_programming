@@ -33,7 +33,7 @@ int *array_range(int min, int max)
 	/* runner = min number in any case my program receives */
 	/* e.g if min = 2 then runner = 2 if max = 5 then 2,3,4,5 */
 	/* runner ascend in the same measure that min keeps ascending */
-	for (runner = 0; runner <= max; runner++, min++)
+	for (runner = 0; runner < positions; runner++, min++)
 		newarray[runner] = min;
 	return (newarray);
 }
