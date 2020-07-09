@@ -27,7 +27,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/* if I were using calloc it would set the pointer to 0 */
 	/* but I must set the pointer to 0 using malloc */
 	/* so we need 'a' that is the elements of the new pointer allocated */
-	for (a = 0; ptr[a] != '\0'; a++)
+	for (a = 0; a < nmemb * size; a++)
 		/* set the pointer to 0 */
 		ptr[a] = 0;
 	return (ptr);
