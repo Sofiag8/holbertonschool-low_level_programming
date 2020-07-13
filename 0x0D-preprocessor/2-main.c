@@ -2,7 +2,7 @@
 /**
  * main - prints the name of the file it was compiled from
  *
- * @__FILE__: macro expands to the name of the current input file
+ * @void: no parameters
  *
  * Return: 0 is success
  */
