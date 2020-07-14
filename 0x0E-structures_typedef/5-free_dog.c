@@ -9,6 +9,7 @@
  */
 void free_dog(dog_t *d)
 {
+	/* free memory from the variables to the pointer of dog_t */
 	if (d)
 	{
 		free(d->name);
