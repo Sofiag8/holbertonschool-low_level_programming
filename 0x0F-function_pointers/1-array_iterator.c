@@ -14,8 +14,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	/* run through the array to know which are the elements */
 	/* we already know the size of the array */
 	/* elements runs while it is less than the size ofc. */
-	for (elements = 0; elements < size; elements++)
-		action(array[elements]);
+	if (action && array)
+	{
+		for (elements = 0; elements < size; elements++)
+			action(array[elements]);
+	}
 	/* so de-reference the pointer to the function */
 	/* to the elements of the array */
 }
