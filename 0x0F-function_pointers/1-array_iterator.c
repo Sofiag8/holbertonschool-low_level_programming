@@ -10,6 +10,10 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+	/* unsigned int because an error told me */
+	/* and because the function is printing integers */
+	/* and then, printing those integers in hexa */
+	/* so elements in the array unsigned integers */
 	unsigned int elements;
 	/* run through the array to know which are the elements */
 	/* we already know the size of the array */
