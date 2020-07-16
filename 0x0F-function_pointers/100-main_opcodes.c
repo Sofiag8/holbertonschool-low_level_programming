@@ -33,6 +33,7 @@ int main(int argc, char **argv)
 	/* we use runner to go through the array we receive in the argv */
 	while (runner < bytes)
 	{
+		/* is pre define how to print an opcodes */
 		printf("%02hhx", *((char *)(main + runner)));
 		if (bytes > runner + 1)
 			printf(" ");
