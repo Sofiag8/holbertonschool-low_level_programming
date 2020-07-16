@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	/* in the argument number 2 that is the position of the operator */
 	/*if is not one of the operators mentioned else print Error */
 	funoperator = get_op_func(argv[2]);
-	if (!funoperator)
+	if (!funoperator || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
