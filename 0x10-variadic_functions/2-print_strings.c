@@ -14,10 +14,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *string;
 
 	va_start(valist, n);
-
+	/* I run trough the string to know which are the words ill print */
 	for (runner = 0; runner < n; runner++)
 	{
+		/* string is equal to the arguments in valist */
+		/* string now represents the arguments while va_Arg iterates */
 		string = va_arg(valist, char*);
+		/* task condition */
+		/* if one of the strings is NULL print (nil) */
 		if (string == NULL)
 		{
 			printf("(nil)");
