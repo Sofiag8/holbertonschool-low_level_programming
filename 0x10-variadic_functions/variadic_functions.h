@@ -15,11 +15,6 @@ typedef struct characters
 	void (*ptrfunc)(va_list);
 } characters;
 
-void printchar(va_list charlist);
-void printinteger(va_list charlist);
-void printfloat(va_list charlist);
-void printstring(va_list charlist);
-
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
