@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-typedef struct characters;
+typedef struct characters
 {
 	/* pointer to the arguments passed to the function print_all) */
 	char *arguments;
@@ -16,6 +16,10 @@ typedef struct characters;
 	void (*ptrfunc)(va_list);
 } characters;
 
+void printchar(va_list charlist);
+void printinteger(va_list charlist);
+void printfloat(va_list charlist);
+void printstring(va_list charlist);
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
