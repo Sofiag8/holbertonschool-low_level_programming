@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
 /**
  * sum_them_all - returns the sum of all its parameters
  *
@@ -27,7 +26,7 @@ int sum_them_all(const unsigned int n, ...)
 		/* total is equal to the sum of the arguments */
 		/* starting with the type va_list (valist) and */
 		/* the type of the total number of arguments */
-		total += va_arg(valist, unsigned int);
+		total += va_arg(valist, int);
 	}
 	/* free a the variable type va_list (valist) */
 	va_end(valist);
