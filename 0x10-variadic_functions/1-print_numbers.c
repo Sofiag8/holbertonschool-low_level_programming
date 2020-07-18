@@ -16,15 +16,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int runner;
 
 	va_start(valist, n);
-	/* task condition */
-	if (separator == NULL)
-		return;
+
 	for (runner = 0; runner < n; runner++)
 	{
 		/* print the numbers iterated for va_arg */
-		printf("%d", va_arg(valist, unsigned int));
-		if (runner + 1 < n)
+		printf("%d", va_arg(valist, int));
+		if (runner != (n - 1) && separator)
+		{
 			printf("%s", separator);
+		}
 	}
 	printf("\n");
 	va_end(valist);
