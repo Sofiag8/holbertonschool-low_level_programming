@@ -1,7 +1,9 @@
 #ifndef _VARIADIC_FUNCTIONS_H
 #define _VARIADIC_FUNCTIONS_H
+
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct characters
 {
