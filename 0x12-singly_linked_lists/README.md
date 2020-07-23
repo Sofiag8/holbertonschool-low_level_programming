@@ -1,4 +1,4 @@
-<title>Project: 0x12. C - Singly linked list</title>
+<h1 class="gap">0x12. C - Singly linked lists</h1>
 
 <h2>Learning Objectives</h2>
 
