@@ -1,8 +1,8 @@
-<h1 class="gap">0x12. C - Singly linked lists</h1>
+<h1 class="gap">Project 0x12. C - How to use Singly linked lists</h1>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/8bKyzTFahgtvQf7aftTjPw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, I am expected to be able to <a href="/rltoken/8bKyzTFahgtvQf7aftTjPw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
@@ -11,7 +11,7 @@
 <li>How to build and use linked lists</li>
 </ul>
 
-<h2>Requirements</h2>
+<h2>Holberton Requirements</h2>
 
 <h3>General</h3>
 
@@ -35,7 +35,7 @@
 
 <h2 class="gap">Tasks</h2>
 
- <p>0. Write a function that prints all the elements of a <code>list_t</code> list.</p>
+<p>0. Write a function that prints all the elements of a <code>list_t</code> list.</p>
 
 <p>1. Write a function that returns the number of elements in a linked <code>list_t</code> list.</p>
 
