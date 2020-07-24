@@ -1,14 +1,15 @@
- global    start
+ .global _start
 
-	          section   .text
-start:	    mov       rax, 0x02000004 ; system call for write
-	          mov       rdi, 1    ; file handle 1 is stdout
-	          mov       rsi, message ; address of string to output
-	          mov       rdx, 13	 ; number of bytes
-	          syscall		 ; invoke operating system to do the write
-	          mov       rax, 0x02000001 ; system call for exit
-	          xor       rdi, rdi	    ; exit code 0
-	          syscall		    ; invoke operating system to exit
+	        .text
+_start:	mov     $1, %rax                # system call 1 is write
+	        mov     $1, %rdi                # file handle 1 is stdout
+	        mov     $message, %rsi          # address of string to output
+	        mov     $13, %rdx               # number of bytes
+	        syscall                         # invoke operating system to do the write
 
-	          section   .data
-message:	  db        "Hello, Holberton", 10 ; note the newline at the end
+	        # exit(0)
+	        mov     $60, %rax               # system call 60 is exit
+	        xor     %rdi, %rdi              # we want return code 0
+	        syscall                         # invoke operating system to exit
+message:
+	        .ascii  "Hello, world\n"
