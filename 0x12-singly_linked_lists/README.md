@@ -44,3 +44,15 @@
 <p>3. Write a function that adds a new node at the end of a <code>list_t</code> list.</p>
 
 <p>4. Write a function that frees a <code>list_t</code> list.</p>
+
+<p>Advance 100: Write a function that prints <code>You&#39;re beat! and yet, you must allow,\nI bore my house upon my back!\n</code> before the <code>main</code> function is executed.</p>
+<ul>
+<li>You are allowed to use the <code>printf</code> function</li>
+</ul>
+
+<p> Advance 101: Write a 64-bit program in assembly that prints <code>Hello, Holberton</code>, followed by a new line.</p>
+<ul>
+<li>You are only allowed to use the <code>printf</code> function</li>
+<li>You are not allowed to use interrupts</li>
+<li>Your program will be compiled using <code>nasm</code> and <code>gcc</code>:</li>
+</ul>
