@@ -13,7 +13,7 @@ int pop_listint(listint_t **head)
 	if (head == NULL)
 		return (0);
 	/* n is equal to the head de reference to n from the structure */
-	/* that is the szie of the list */
+	/* that is the nodes data (n) that are integers */
 	n = (*head)->n;
 	/* now temp is the new head node */
 	ptraux = *head;
