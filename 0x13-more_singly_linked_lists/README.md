@@ -54,7 +54,8 @@ typedef struct listint_s
 
   </article>
 
-    <h2 class="gap">Tasks</h2>
+ <hr class="gap">
+      <h2 class="gap">Tasks</h2>
 
  <h4 class="task">
     0. Print list
