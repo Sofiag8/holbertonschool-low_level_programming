@@ -1,8 +1,8 @@
-<h1 class="gap">0x13. C - More singly linked lists</h1>
+<h1 class="gap">Project 0x13. C - More singly linked lists</h1>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/165o2edbvcnHqGsL_nB29w" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, I am expected to be able to explain to anyone, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
