@@ -20,7 +20,7 @@ int pop_listint(listint_t **head)
 	/* head goes to the next node */
 	*head = (*head)->next;
 	/* frees temp so the head node is deleted */
-	free(ptraux);
+	free(*head);
 	/* return the head nodes data that is n according to the structure */
 	return (n);
 }
