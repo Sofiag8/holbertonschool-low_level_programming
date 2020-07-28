@@ -1,5 +1,4 @@
 #include "lists.h"
-listint_t *getnode(int n);
 /**
  * insert_nodeint_at_index - inserts a new node at a given position
  * @head: double pointer to the head of the listint list
@@ -10,41 +9,33 @@ listint_t *getnode(int n);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *headaux;
+	listint_t *newnode;
 	unsigned int size;
 
 	size = 0;
+	newnode = malloc(sizeof(listint_t));
 
-	if (!idx)
-	{
+	if (newnode == NULL)
 		return (NULL);
-	}
-	else
+	newnode->n = n;
+	if (idx == 0)
 	{
-		while (idx--)
-		{
-			if (idx == 0)
-			{
-				headaux = getnode(n);
-				headaux->next = *head;
-				*head = headaux;
-			}
-			head = &(*head)->next;
-		}
-		size++;
+		newnode->next = *head;
+		*head = newnode;
+		return (newnode);
 	}
-	return (headaux);
-}
-/**
- * getnode - function to create and return a node
- * @n: is the data
- * Return: a pointer listint_t type
- */
-listint_t *getnode(int n)
-{
-	listint_t *addrnewnode;
-
-	addrnewnode = malloc(sizeof(listint_t));
-	addrnewnode->n = n;
-	addrnewnode->next = NULL;
-	return (addrnewnode);
+	headaux = *head;
+	while (headaux != NULL && size != idx - 1)
+	{
+		size++;
+		headaux = headaux->next;
+	}
+	if (size == idx - 1 && headaux != NULL)
+	{
+		newnode->next = headaux->next;
+		headaux->next = newnode;
+		return (newnode);
+	}
+	free(newnode);
+	return (NULL);
 }
