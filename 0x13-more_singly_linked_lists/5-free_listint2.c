@@ -9,8 +9,8 @@ void free_listint2(listint_t **head)
 	while (*head)
 	{
 		/* use a temporary pointer to the next node */
-		listint_t *next = (*head)->next;
+		free_listint2(&(*head)->next);
 		free(*head);
-		*head = next;
+		*head = NULL;
 	}
 }
