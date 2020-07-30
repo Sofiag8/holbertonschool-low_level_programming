@@ -72,7 +72,7 @@ typedef struct listint_s
 <p>Write a function that returns the number of elements in a linked <code>listint_t</code> list.</p>
 
 <h4 class="task">
-    2. Add node
+    2. Add node at the beginning
       <span class="alert alert-warning mandatory-optional">
       </span>
   </h4>
