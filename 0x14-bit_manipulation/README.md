@@ -45,3 +45,38 @@
       <span class="alert alert-warning mandatory-optional">      </span>
   </h4>
 <p>Write a function that converts a binary number to an <code>unsigned int</code>.</p>
+
+ <h4 class="task">
+    1. 1
+      <span class="alert alert-warning mandatory-optional">
+             </span>
+  </h4>
+ <p>Write a function that prints the binary representation of a number.</p>
+
+ <h4 class="task">
+    2. 10
+      <span class="alert alert-warning mandatory-optional">
+      </span>
+  </h4>
+<p>Write a function that returns the value of a bit at a given index.</p>
+
+ <h4 class="task">
+    3. 11
+      <span class="alert alert-warning mandatory-optional">
+             </span>
+  </h4>
+<p>Write a function that sets the value of a bit to <code>1</code> at a given index.</p>
+
+<h4 class="task">
+    4. 100
+      <span class="alert alert-warning mandatory-optional">
+      </span>
+  </h4>
+ <p>Write a function that sets the value of a bit to <code>0</code> at a given index.</p>
+
+<h4 class="task">
+    5. 101
+      <span class="alert alert-warning mandatory-optional">
+      </span>
+  </h4>
+<p>Write a function that returns the number of bits you would need to flip to get from one number to another.</p>
