@@ -12,5 +12,5 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 int _putchar(char c);
 void num_to_binary(unsigned long int n);
-unsigned int countsetbits(unsigned int a);
+unsigned int countsetbits(unsigned int n);
 #endif
