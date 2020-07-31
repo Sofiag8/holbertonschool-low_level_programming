@@ -1,5 +1,4 @@
 #include "holberton.h"
-unsigned int countsetbits(unsigned int n);
 /**
  * flip_bits - tells the number of bits to flip to
  * get from one number to another
