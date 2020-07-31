@@ -9,9 +9,9 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int numbits = 0;
+		numbits = (countsetbits(n ^ m));
 	/* Return count of set bits in */
 	/* n XOR m */
-	numbits = (countsetbits(n ^ m));
 		return (numbits);
 }
 /**
@@ -20,15 +20,15 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  * Description: function that count set bits
  * Return: an integer
  */
-unsigned int countsetbits(unsigned int n)
+unsigned int countsetbits(unsigned int a)
 {
 	unsigned int count;
 
 	count = 0;
-	while (n > 0)
+	while (a > 0)
 	{
 		count++;
-		n &= (n - 1);
+		a &= (a - 1);
 	}
 	return (count);
 }
