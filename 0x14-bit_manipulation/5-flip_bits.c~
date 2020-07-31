@@ -1,4 +1,5 @@
 #include "holberton.h"
+unsigned int countsetbits(unsigned int n);
 /**
  * flip_bits - tells the number of bits to flip to
  * get from one number to another
@@ -8,16 +9,22 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int count = 0;
-	/* loop until both of them become zero */
-	while (n || m)
+	return (counsetbits(n ^ m));
+}
+/**
+ * countsetbits - count set bits
+ * @n: the given number
+ * Return: an integer
+ */
+unsigned int countsetbits(unsigned int n)
+{
+	unsigned int count;
+
+	count = 0;
+	while (n > 0)
 	{
-		/* last bits in n and m */
-		if (((n & 1) ^ (m & 1)) == 1)
-			count++;
-		/* right shift both integers by 1 */
-		n >>= 1;
-		m >>= 1;
+		count++;
+		n &= (n - 1);
 	}
 	return (count);
 }
