@@ -20,15 +20,15 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  * Description: function that count set bits
  * Return: an integer
  */
-unsigned int countsetbits(unsigned int a)
+unsigned int countsetbits(unsigned int n)
 {
 	unsigned int count;
 
 	count = 0;
-	while (a > 0)
+	while (n > 0)
 	{
 		count++;
-		a &= (a - 1);
+		n &= (n - 1);
 	}
 	return (count);
 }
