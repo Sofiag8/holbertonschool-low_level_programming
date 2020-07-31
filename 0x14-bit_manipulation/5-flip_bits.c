@@ -8,11 +8,10 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int numbits = 0;
-		numbits = (countsetbits(n ^ m));
+	unsigned int numbits = (countsetbits(n ^ m));
 	/* Return count of set bits in */
 	/* n XOR m */
-		return (numbits);
+	return (numbits);
 }
 /**
  * countsetbits - count set bits
