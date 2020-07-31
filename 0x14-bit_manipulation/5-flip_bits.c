@@ -10,7 +10,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	/* Return count of set bits in */
 	/* n XOR m */
-	return (counsetbits(n ^ m));
+	return (countsetbits(n ^ m));
 }
 /**
  * countsetbits - count set bits
