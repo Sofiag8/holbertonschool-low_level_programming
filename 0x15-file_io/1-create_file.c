@@ -20,7 +20,6 @@ int create_file(const char *filename, char *text_content)
 		;
 	/*  ssize_t write(int fd, const void *buf, size_t count); */
 	write(fd, text_content, size);
-	
 	close(fd);
 	return (1);
 }
