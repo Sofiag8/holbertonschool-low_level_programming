@@ -1,4 +1,4 @@
-B<h1 class="gap">Project 0x15. C - File I/O</h1>
+<h1 class="gap">Project 0x15. C - File I/O</h1>
 
  <p><img src="https://www.putorius.net/wp-content/uploads/2019/02/standard-streams.jpg" /></p>
 
