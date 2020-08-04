@@ -15,11 +15,15 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
 		return (-1);
-	/* for write we need the size */
-	for (size = 0; text_content[size] != '\0'; size++)
-		;
-	/*  ssize_t write(int fd, const void *buf, size_t count); */
-	write(fd, text_content, size);
+
+	if (text_content)
+	{
+		/* for write we need the size */
+		for (size = 0; text_content[size] != '\0'; size++)
+			;
+		/*  ssize_t write(int fd, const void *buf, size_t count); */
+		write(fd, text_content, size);
+	}
 	close(fd);
 	return (1);
 }
