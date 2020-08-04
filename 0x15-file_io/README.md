@@ -1,5 +1,8 @@
 <h1 class="gap">Project 0x15. C - File I/O</h1>
 
+ <p><img src="https://images.slideplayer.com/32/9979015/slides/slide_4.jpg" /></p>
+
+
  <article id="description" class="gap formatted-content">
     <h2>Resources</h2>
 
@@ -7,7 +10,7 @@
 
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/File_descriptor" title="File descriptors" target="_blank">File descriptors</a> </li>
-<li><a href="/rltoken/Ig_LMzPlXTT-EwoSAgYK-Q" title="C Programming in Linux Tutorial #024 - open() read() write() Functions" target="_blank">C Programming in Linux Tutorial #024 - open() read() write() Functions</a> </li>
+<li><a href="https://www.youtube.com/watch?v=dP3N8g7h8gY" title="C Programming in Linux Tutorial #024 - open() read() write() Functions" target="_blank">C Programming in Linux Tutorial #024 - open() read() write() Functions</a> </li>
 </ul>
 
 <p><strong>man or help</strong>:</p>
