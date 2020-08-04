@@ -6,7 +6,7 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/zwnc2vqfmCs_ZThsyxkjJw" title="File descriptors" target="_blank">File descriptors</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/File_descriptor" title="File descriptors" target="_blank">File descriptors</a> </li>
 <li><a href="/rltoken/Ig_LMzPlXTT-EwoSAgYK-Q" title="C Programming in Linux Tutorial #024 - open() read() write() Functions" target="_blank">C Programming in Linux Tutorial #024 - open() read() write() Functions</a> </li>
 </ul>
 
