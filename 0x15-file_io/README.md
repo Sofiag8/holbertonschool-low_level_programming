@@ -1,6 +1,6 @@
-<h1 class="gap">Project 0x15. C - File I/O</h1>
+B<h1 class="gap">Project 0x15. C - File I/O</h1>
 
- <p><img src="https://images.slideplayer.com/32/9979015/slides/slide_4.jpg" /></p>
+ <p><img src="https://www.putorius.net/wp-content/uploads/2019/02/standard-streams.jpg" /></p>
 
 
  <article id="description" class="gap formatted-content">
