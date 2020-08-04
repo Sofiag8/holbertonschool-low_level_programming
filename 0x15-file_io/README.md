@@ -64,6 +64,9 @@
 
   </article>
 
+ <hr class="gap">
+      <h2 class="gap">Tasks</h2>
+
  <h4 class="task">
     0. Tread lightly, she is near
       <span class="alert alert-warning mandatory-optional">
