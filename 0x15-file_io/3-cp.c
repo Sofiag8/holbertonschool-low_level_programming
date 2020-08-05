@@ -27,7 +27,15 @@ int main(int ac, char **av)
 void copy_file(char *file_from, char *file_to)
 {
 	int fd1, fd2;
-	char buffer[SIZE];
+	char buffer[1024];
+
+	fd2 = open(file_from, O_RDONLY);
+	if ((!file_from) | (fd2 == -1))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+			file_from);
+		exit(98);
+	}
 	/* create the file to copy if it exists truncate */
 	/* Permissions of the created file: rw-rw-r-- */
 	fd1 = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
@@ -36,19 +44,12 @@ void copy_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	fd2 = open(file_from, O_RDONLY);
-	/* task condition */
-	if ((!file_from) | file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			file_from);
-		exit(98);
-	}
 	while ((read(fd2, buffer, 1024)) != 0)
 	{
 		if (fd2 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't read from file%s\n"
+				, file_from);
 			exit(98);
 		}
 		write(fd1, buffer, fd2);
@@ -59,9 +60,9 @@ void copy_file(char *file_from, char *file_to)
 		exit(99);
 	}
 	if (close(fd1) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_to);
 	exit(100);
 	if (close(fd2) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_from);
 	exit(100);
 }
