@@ -1,76 +1,74 @@
-#include "holberton.h"
+B#include "holberton.h"
 /**
- * Betty - dont bother betty
- * @file_from: string
-*/
-void Betty(char *file_from)
+ * error_read - error read
+ * @argv: arguments passed
+ */
+void error_read(char *argv)
 {
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv);
 	exit(98);
 }
 /**
- * main - check the code for Holberton School students.
- * @ac: number of arguments
- * @av: file to copy
- * Return: Always 0.
+ * error_write - error write
+ * @argv: error write
  */
-int main(int ac, char **av)
+void error_write(char *argv)
 {
-	/* if is not the correct number of arguments */
-	if (ac != 3)
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
+	exit(99);
+}
+/**
+ * error_close - error close
+ * @file: file
+ */
+void error_close(int file)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+	exit(100);
+}
+/**
+ * main - function that copies one file to another
+ * @argc: number of arguments passed
+ * @argv: arguments passed
+ * Return: 0 in success
+ */
+int main(int argc, char **argv)
+{
+	int file_from, file_to, wr;
+	char buffer[1024];
+	int characters = 1;
+
+	if (argc != 3)
 	{
-		/* task condition. on the POSIX STANDAR ERROR = STDERR_FILENO*/
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	/* call the copy function */
-	copy_file(av[1], av[2]);
-	return (0);
-}
-/**
- * copy_file - copies the content of a file to another file
- * @file_to: where im going to copy
- * @file_from: file to copy
- * Return: void
- */
-void copy_file(char *file_from, char *file_to)
-{
-	int fd2, fd1, r_w, r_r;
-	char buffer[1024];
-
-	fd2 = open(file_from, O_RDONLY);
-	if ((file_from == NULL) | (fd2 == -1))
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == 1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			file_from);
-		exit(98);
+		error_read(argv[1]);
 	}
-	/* create the file to copy if it exists truncate */
-	/* Permissions of the created file: rw-rw-r-- */
-	fd1 = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	if (fd1 == -1)
+	file_to = open(argv[2],  O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
+		error_write(argv[2]);
 	}
-	r_r = read(fd2, buffer, 1024);
-	while (r_r > 0)
+	while (characters > 0)
 	{
-		if (r_r == -1)
+		characters = read(file_from, buffer, 1024);
+		if (characters == -1)
 		{
-			Betty(file_from);
+			error_read(argv[1]);
 		}
-		r_w = write(fd1, buffer, r_r);
+		wr = write(file_to, buffer, characters);
+		if (wr == -1)
+		{
+			error_write(argv[2]);
+		}
 	}
-	if (r_w == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
-	if (close(fd2) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_to);
-	exit(100);
-	if (close(fd1) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_from);
-	exit(100);
+	if (close(file_from) == -1)
+		error_close(file_from);
+	if (close(file_to) == -1)
+		error_close(file_to);
+	return (0);
 }
