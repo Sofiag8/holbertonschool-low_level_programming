@@ -27,6 +27,7 @@ int main(int ac, char **av)
 void copy_file(char *file_from, char *file_to)
 {
 	int fd1, fd2;
+	int r_w, r_r;
 	char buffer[1024];
 
 	fd2 = open(file_from, O_RDONLY);
@@ -44,17 +45,17 @@ void copy_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while ((read(fd2, buffer, 1024)) != 0)
+	while ((r_r = read(fd2, buffer, 1024)) != 0)
 	{
-		if (fd2 == -1)
+		if (r_r == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file%s\n"
 				, file_from);
 			exit(98);
 		}
-		write(fd1, buffer, fd2);
+		r_w = write(fd1, buffer, r_r);
 	}
-	if (fd1 == -1)
+	if (r_w == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
