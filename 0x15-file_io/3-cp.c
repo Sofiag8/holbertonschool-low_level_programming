@@ -54,10 +54,10 @@ void copy_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while ((r_r = read(fd2, buffer, 1024)) > 0)
+	while ((r_r = read(fd2, buffer, 1024)) != 0)
 	{
 		r_w = write(fd1, buffer, r_r);
-		if (r_w != r_r)
+		if (r_r == -1)
 		{
 			Betty(file_from);
 		}
