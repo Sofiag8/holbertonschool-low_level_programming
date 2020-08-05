@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
  * Betty - dont bother betty
+ * @file_from: string
 */
-void Betty(void)
+void Betty(char *file_from)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
@@ -58,7 +59,7 @@ void copy_file(char *file_from, char *file_to)
 		r_w = write(fd1, buffer, r_r);
 		if (r_w != r_r)
 		{
-			Betty();
+			Betty(file_from);
 		}
 	}
 	if (r_w == -1)
