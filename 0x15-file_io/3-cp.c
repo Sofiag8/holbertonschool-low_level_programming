@@ -35,8 +35,7 @@ int main(int ac, char **av)
  */
 void copy_file(char *file_from, char *file_to)
 {
-	int fd1, fd2;
-	int r_w, r_r;
+	int fd2, fd1, r_w, r_r;
 	char buffer[1024];
 
 	fd2 = open(file_from, O_RDONLY);
@@ -56,21 +55,21 @@ void copy_file(char *file_from, char *file_to)
 	}
 	while ((r_r = read(fd2, buffer, 1024)) != 0)
 	{
-		r_w = write(fd1, buffer, r_r);
 		if (r_r == -1)
 		{
 			Betty(file_from);
 		}
+		r_w = write(fd1, buffer, r_r);
 	}
 	if (r_w == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	if (close(fd1) == -1)
+	if (close(fd2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_to);
 	exit(100);
-	if (close(fd2) == -1)
+	if (close(fd1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file_from);
 	exit(100);
 }
