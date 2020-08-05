@@ -53,7 +53,8 @@ void copy_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while ((r_r = read(fd2, buffer, 1024)) != 0)
+	r_r = read(fd2, buffer, 1024);
+	while (r_r > 0)
 	{
 		if (r_r == -1)
 		{
