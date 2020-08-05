@@ -1,5 +1,13 @@
 #include "holberton.h"
 /**
+ * Betty - dont bother betty
+*/
+void Betty(void)
+{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+	exit(98);
+}
+/**
  * main - check the code for Holberton School students.
  * @ac: number of arguments
  * @av: file to copy
@@ -45,15 +53,13 @@ void copy_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while ((r_r = read(fd2, buffer, 1024)) != 0)
+	while ((r_r = read(fd2, buffer, 1024)) > 0)
 	{
-		if (r_r == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file%s\n"
-				, file_from);
-			exit(98);
-		}
 		r_w = write(fd1, buffer, r_r);
+		if (r_w != r_r)
+		{
+			Betty();
+		}
 	}
 	if (r_w == -1)
 	{
