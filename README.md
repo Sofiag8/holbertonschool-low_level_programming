@@ -24,3 +24,22 @@
 <li> Printf project </li>
 <li> Shell project </li>
 </ul>
+
+<h3> Specific Projects</h3>
+<ul>
+<li> Variables if, else, while </li>
+<li> Nested loops </li>
+<li> Debugging </li>
+<li> Pointers, arrays and strings </li>
+<li> Recursion </li>
+<li> Static Libraries </li>
+<li> argc and argv </li>
+<li> malloc and free </li>
+<li> preprocessor </li>
+<li> structures and typedef </li>
+<li> Function pointers </li>
+<li> Variadic functions </li>
+<li> Singly linked lists </li>
+<li> Bit manipulation </li>
+<li> File I/O </li>
+</ul>
