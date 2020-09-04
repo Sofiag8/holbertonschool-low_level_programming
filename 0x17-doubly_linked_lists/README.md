@@ -95,7 +95,7 @@ typedef struct dlistint_s
 <h4 class="task">
     3. Add node at the end
 </h4>
-p>Write a function that adds a new node at the end of a <code>dlistint_t</code> list.</p>
+<p>Write a function that adds a new node at the end of a <code>dlistint_t</code> list.</p>
 
 <ul>
 <li>Prototype: <code>dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);</code></li>
