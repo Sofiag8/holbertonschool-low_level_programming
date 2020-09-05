@@ -10,11 +10,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node;
 	dlistint_t *aux_h;
-	unsigned int runner_idx;
-
-	runner_idx = 0;
-	if (h == NULL)
-		return (NULL);
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
@@ -27,23 +22,22 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	/* traverse the list */
 	aux_h = *h;
-	while (aux_h != NULL && runner_idx != idx - 1)
+	if (aux_h == NULL)
+		return (NULL);
+	while (idx > 1)
 	{
-		runner_idx++;
 		aux_h = aux_h->next;
+		idx--;
 	}
 	/* case at the end, recursion */
-	if (runner_idx == idx)
+	if (aux_h->next == NULL)
 	{
 		return (add_dnodeint_end(h, n));
 	}
 	/* idx found then add new_node */
-	else /*if (runner_idx == idx - 1 && aux_h != NULL)*/
-	{
-		new_node->next = aux_h->next;
-		aux_h->next->prev = new_node;
-		aux_h->next = new_node;
-		return (new_node);
-	}
-	return (NULL);
+	new_node->prev = aux_h;
+	new_node->next = aux_h->next;
+	aux_h->next->prev = new_node;
+	aux_h->next = new_node;
+	return (new_node);
 }
