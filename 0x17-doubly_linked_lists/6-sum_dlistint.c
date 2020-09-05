@@ -8,8 +8,6 @@ int sum_dlistint(dlistint_t *head)
 {
 	int add_data;
 
-	if (head == NULL)
-		return (0);
 	/* traverse the list and add each node value */
 	while (head)
 	{
