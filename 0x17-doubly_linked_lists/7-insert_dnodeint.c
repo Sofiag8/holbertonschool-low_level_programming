@@ -11,9 +11,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new_node;
 	dlistint_t *aux_h;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
-		return (NULL);
 	/* case asked idx is 0 or h is null at the beggining, recursion */
 	if (idx == 0)
 	{
@@ -34,6 +31,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (add_dnodeint_end(h, n));
 	}
 	/* idx found then add new_node */
+	new_node = malloc(sizeof(dlistint_t));
+        if (new_node == NULL)
+                return (NULL);
 	new_node->n = n;
 	new_node->prev = aux_h;
 	new_node->next = aux_h->next;
