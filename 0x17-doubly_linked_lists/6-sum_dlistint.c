@@ -6,7 +6,8 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int add_data;
+	int add_data = head;
+	dlistint_t aux_head;
 
 	/* traverse the list and add each node value */
 	while (head)
