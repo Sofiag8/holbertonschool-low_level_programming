@@ -6,11 +6,12 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int add_data = head;
-	dlistint_t aux_head;
+	int add_data;
+	dlistint_t *aux_head;
 
+	aux_head = head;
 	/* traverse the list and add each node value */
-	while (head)
+	while (aux_head)
 	{
 		add_data += aux_head->n;
 		aux_head = aux_head->next;
