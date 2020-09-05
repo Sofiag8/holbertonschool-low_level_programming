@@ -18,11 +18,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	/* traverse the list */
 	aux_h = *h;
-	if (aux_h == NULL)
-		return (NULL);
 	while (idx > 1)
 	{
 		aux_h = aux_h->next;
+		if (aux_h == NULL)
+			return (NULL);
 		idx--;
 	}
 	/* case at the end, recursion */
