@@ -3,7 +3,7 @@
 
 #include <stdlib.h> /* malloc, free */
 #include <string.h> /* strdup, strcmp */
-#include <stdio.h>
+#include <stdio.h> /* exit status */
 
 /* given data structures */
 
