@@ -4,7 +4,7 @@
  * @ht: the hashs table I want to add or update the key/value to
  * @key: is the str passed to djb2 (tha key )
  * @value: value associated with the key
- * Return: 1 if succeeded or 0 otherwise
+ * Return: 1 if succeeded or 0 if fail
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
