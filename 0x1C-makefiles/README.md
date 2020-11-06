@@ -14,8 +14,6 @@
 
 <h2>Requirements</h2>
 
-<h3>General</h3>
-
 <ul>
 <li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
 <li>OS: Ubuntu 14.04 LTS</li>
@@ -31,7 +29,8 @@
 
 <p>In the following tasks, we are going to use <a href="https://github.com/holbertonschool/0x1B.c" title="these files" target="_blank">these files</a>. We want to compile these only.</p>
 
-      <h2 class="gap">Tasks</h2>
+<hr class="gap">
+<h2 class="gap">Tasks</h2>
   <h4 class="task">
     0. make -f 0-Makefile
   </h4>
