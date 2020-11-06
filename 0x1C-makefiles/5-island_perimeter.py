@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" periemter module """
 
 
 def island_perimeter(grid):
@@ -16,14 +17,10 @@ def island_perimeter(grid):
     side = 0
     for height in range(len(grid)):
         for width in range(len(grid[height])):
-            if grid[height][width] == 1:  # if land zone (1)
-                lands += 1  # sum 1 to land
+            if grid[height][width] == 1:
+                lands += 1
                 if height > 0 and grid[height-1][width] == 1:
-                    #  if there is a land at its left side
-                    #  add 1 to number of sides
                     side += 1
                 if width > 0 and grid[height][width-1] == 1:
-                    #  if there is a land above then
-                    #  add 1 to sides
                     side += 1
     return lands * 4 - side * 2
