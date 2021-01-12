@@ -12,7 +12,6 @@ h3>General</h3>
 
 <h2>Requirements</h2>
 
-<h3>General</h3>
 
 <ul>
 <li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
