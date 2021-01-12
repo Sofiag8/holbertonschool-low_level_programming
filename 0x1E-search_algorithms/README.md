@@ -1,7 +1,7 @@
 <h1 class="gap">Project 0x1E. C - Search Algorithms</h1>
 
 <h2>Learning Objectives</h2>
-h3>General</h3>
+<h3>General</h3>
 
 <ul>
 <li>What is a search algorithm</li>
